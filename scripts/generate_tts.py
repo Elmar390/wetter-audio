@@ -44,8 +44,9 @@ def fetch_weather_text(url):
 def summarize_with_openai(text):
     url = "https://api.openai.com/v1/chat/completions"
     headers = {"Authorization": f"Bearer {OPENAI_KEY}", "Content-Type": "application/json"}
-    prompt_system = ("Du bist ein Assistent, der kurze, natürlich klingende Wetteransagen auf Deutsch formuliert. "
-                     "Gib eine prägnante, gesprochene Version (1-2 Sätze), freundlich, geeignet für Audio.")
+    prompt_system = ("Du bist ein Assistent, der kurze, natürlich klingende Wetteransagen auf Deutsch formuliert."
+                     "Die Wetteransagen werden am Morgen ausgegeben, wenn die ganze Familie am Frühstück sitzt."
+                     "Die Stimme soll weiblich und freundlich sein, familiär, gesprochene Version (1-2 Sätze), geeignet für Audio.")
     data = {
         "model": "gpt-3.5-turbo",
         "messages": [
