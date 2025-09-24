@@ -2,7 +2,7 @@ name: Daily Weather TTS
 
 on:
   schedule:
-    - cron: "0 04 * * *"   # Beispiel: 06:00 UTC täglich (-> an deine TZ anpassen)
+    - cron: "0 5 * * *"   # Beispiel: 06:00 UTC täglich (-> an deine TZ anpassen)
   workflow_dispatch:
 
 permissions:
